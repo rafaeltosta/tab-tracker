@@ -14,10 +14,4 @@ app.post('/register', (req, res) => {
     });
 });
 
-// app.get('/status', (req, res) => {
-//     res.send({
-//         message: "Opa"
-//     });
-// })
-
 app.listen(process.env.PORT || 8081);
