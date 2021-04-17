@@ -1,14 +1,26 @@
 <template>
-  <div>
-  <h1>Register</h1>
-    <input type="email" name="email" v-model="email" placeholder="email" />
-    <br>
-    <input type="password" name="password" v-model="password" placeholder="password" />
-    <br>
-    <div class="error" v-html="error" />
-    <br>
-    <button @click='register'>Register</button>
-  </div>
+  <v-app>
+    <v-main>
+      <v-container>
+        <v-row>
+          <v-col class="borda rounded elevation-5 mt-10 text-center pb-5" md="4" offset-md="4">
+            <v-toolbar flat dense dark>
+              <v-toolbar-title>Register</v-toolbar-title>
+            </v-toolbar>
+            <div>
+              <input class="my-5" type="email" name="email" v-model="email" placeholder="email" />
+              <br>
+              <input type="password" name="password" v-model="password" placeholder="password" />
+              <br>
+              <div class="error mt-3 p-5 rounded" v-html="error" />
+              <br>
+              <v-btn elevation="2" @click='register'>Register</v-btn>
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
@@ -39,5 +51,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.error {color:red;}
+.error {color:white;}
 </style>
